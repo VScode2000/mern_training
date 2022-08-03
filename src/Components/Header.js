@@ -43,21 +43,21 @@ export default function Header() {
               </svg>
             </div>
 
-            <ul className="flex flex-row mt-0 space-x-8 text-sm uppercase font-semibold">
-                <li>
+            <ul className="flex flex-col text-xl uppercase font-semibold">
+            <input type="text" id="search-navbar" className="inline-block p-2.5 pl-8 w-60 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
+                <li className='mt-7'>
                     <NavLink to={'/'} className="text-gray-900 hover:none" aria-current="page">Home</NavLink>
                 </li>
-                <li>
+                <li className='mt-7'>
                     <NavLink to={'/about-us'} className="text-gray-900 hover:none">About US</NavLink>
                 </li>
-                <li>
+                <li className='mt-7'>
                     <NavLink to={'/products'} className="text-gray-900 hover:none">Products</NavLink>
                 </li>
-                <li>
+                <li className='mt-7'>
                     <NavLink to={'/contact-us'} className="text-gray-900 hover:none">Contact US</NavLink>
                 </li>
             </ul>
-            <input type="text" id="search-navbar" className="block p-2 pl-8 w-60 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
     </div>
     </section>
 
@@ -85,9 +85,9 @@ export default function Header() {
       }
       .showMenuNav {
         display: block;
-        position: absolute;
+        position: fixed;
         width: 100%;
-        height: 100vh;
+        height: 95vh;
         top: 0;
         left: 0;
         background: white;
