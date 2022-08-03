@@ -11,7 +11,7 @@ export default function Header() {
         <nav className="border-gray-200 justify-center bg-gray-900">
     <div className="flex flex-wrap justify-between items-center max-w-screen-2xl px-6 py-2.5 ">
         <a href="/" className="flex items-center">
-            <img src={logo} className="mr-3 h-10 lg:h-16 w-17" alt="JTL Logo"/>
+            <img src={logo} className="mr-3 h-8 lg:h-9" alt="JTL Logo"/>
              <span className="self-center text-white text-md lg:text-lg font-semibold whitespace-nowrap">Jain Tools India</span> 
         </a>
         <section className="flex lg:hidden">
