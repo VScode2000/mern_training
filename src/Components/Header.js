@@ -87,7 +87,7 @@ export default function Header() {
         display: block;
         position: fixed;
         width: 100%;
-        height: 95vh;
+        height: 100vh;
         top: 0;
         left: 0;
         background: white;
