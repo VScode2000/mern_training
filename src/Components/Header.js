@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from '../img/logo.png';
-import {BsFillTelephoneFill} from 'react-icons/bs'
 import {NavLink} from 'react-router-dom'
 
 export default function Header() {
@@ -8,20 +7,13 @@ export default function Header() {
     <div className='shadow-xl'>
     <div>
         <nav className="bg-white border-gray-200 justify-center">
-    <div className="flex flex-wrap justify-between items-center  max-w-screen-2xl px-4 md:px-6 py-2.5 ">
-        <a href="/" className="flex items-center ">
-            <img src={logo} className="mr-3 h-10 sm:h-16 w-17" alt="JTL Logo"/>
-             <span className="self-center text-xl font-semibold whitespace-nowrap">Jain Tools India</span> 
+    <div className="flex flex-wrap justify-between items-center max-w-screen-2xl px-6 py-2.5 ">
+        <a href="/" className="flex items-center">
+            <img src={logo} className="mr-3 h-10 lg:h-16 w-17" alt="JTL Logo"/>
+             <span className="self-center text-md lg:text-xl font-semibold whitespace-nowrap">Jain Tools India</span> 
         </a>
-        <div className="flex items-center mr-6 text-sm font-medium text-gray-500"><BsFillTelephoneFill/>&nbsp;&nbsp;
-            <a href="tel:9540963674" className="hover:underline">+91-9540963674</a>
-        </div>
-    </div>
-</nav>
- <nav className="bg-gray-50">
-    <div className="py-1 mx-auto max-w-screen-xl md:px-6">
-        <div className="flex items-center justify-between flex-wrap">
-            <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm uppercase font-semibold">
+        
+            <ul className="flex flex-row mt-0 space-x-8 text-sm uppercase font-semibold">
                 <li>
                     <NavLink to={'/'} className="text-gray-900 hover:none" aria-current="page">Home</NavLink>
                 </li>
@@ -35,8 +27,7 @@ export default function Header() {
                     <NavLink to={'/contact-us'} className="text-gray-900 hover:none">Contact US</NavLink>
                 </li>
             </ul>
-            <input type="text" id="search-navbar" className="block p-2 pl-10 w-80 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
-        </div>
+            <input type="text" id="search-navbar" className="block p-2 pl-10 w-60 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
     </div>
 </nav>
 
