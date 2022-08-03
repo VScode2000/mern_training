@@ -239,7 +239,7 @@ const Footer = () => {
 
   <div class="text-center p-4">
     © 2021 Copyright:
-    <a class="text-white" href="https://tailwind-elements.com/">Tailwind Elements</a>
+    <a class="text-white" href="/">Jain Tools India</a>
   </div>
 </footer>
   );
