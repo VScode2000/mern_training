@@ -5,9 +5,14 @@ npm install body-parser
 		mongodb 
 		react-router-dom 
 		fs 
-	    -D tailwindcss postcss autoprefixer
+		-D tailwindcss postcss autoprefixer
+		@material-tailwind/react
+
+
 	    npx tailwindcss init -p
 	    npx create-react-app [project name]
+
+
 
 **Optional**
 npm i react-icons
