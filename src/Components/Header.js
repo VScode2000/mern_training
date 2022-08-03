@@ -6,7 +6,7 @@ export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className='shadow-md'>
+    <div className='shadow-xl'>
     <div>
         <nav className="border-gray-200 justify-center bg-gray-900">
     <div className="flex flex-wrap justify-between items-center max-w-screen-2xl px-6 py-2.5 ">
