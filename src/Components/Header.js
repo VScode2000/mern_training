@@ -8,20 +8,20 @@ export default function Header() {
   return (
     <div className='shadow-md'>
     <div>
-        <nav className="bg-white border-gray-200 justify-center">
+        <nav className="border-gray-200 justify-center bg-gray-900">
     <div className="flex flex-wrap justify-between items-center max-w-screen-2xl px-6 py-2.5 ">
         <a href="/" className="flex items-center">
             <img src={logo} className="mr-3 h-10 lg:h-16 w-17" alt="JTL Logo"/>
-             <span className="self-center text-md lg:text-lg font-semibold whitespace-nowrap">Jain Tools India</span> 
+             <span className="self-center text-white text-md lg:text-lg font-semibold whitespace-nowrap">Jain Tools India</span> 
         </a>
         <section className="flex lg:hidden">
           <div
             className="space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -30,7 +30,7 @@ export default function Header() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-8 w-8 text-white"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -44,18 +44,18 @@ export default function Header() {
             </div>
 
             <ul className="flex flex-col text-xl uppercase font-semibold">
-            <input type="text" id="search-navbar" className="inline-block p-2.5 pl-8 w-60 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
+            <input type="text" id="search-navbar" className="inline-block p-2.5 pl-8 w-60 text-gray-900 bg-white rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
                 <li className='mt-7'>
-                    <NavLink to={'/'} className="text-gray-900 hover:none" aria-current="page">Home</NavLink>
+                    <NavLink to={'/'} className="text-white hover:none" aria-current="page">Home</NavLink>
                 </li>
                 <li className='mt-7'>
-                    <NavLink to={'/about-us'} className="text-gray-900 hover:none">About US</NavLink>
+                    <NavLink to={'/about-us'} className="text-white hover:none">About US</NavLink>
                 </li>
                 <li className='mt-7'>
-                    <NavLink to={'/products'} className="text-gray-900 hover:none">Products</NavLink>
+                    <NavLink to={'/products'} className="text-white hover:none">Products</NavLink>
                 </li>
                 <li className='mt-7'>
-                    <NavLink to={'/contact-us'} className="text-gray-900 hover:none">Contact US</NavLink>
+                    <NavLink to={'/contact-us'} className="text-white hover:none">Contact US</NavLink>
                 </li>
             </ul>
     </div>
@@ -63,16 +63,16 @@ export default function Header() {
 
                <ul className="hidden lg:flex flex-row mt-0 space-x-8 text-sm uppercase font-semibold">
                   <li>
-                      <NavLink to={'/'} className="text-gray-900 hover:none" aria-current="page">Home</NavLink>
+                      <NavLink to={'/'} className="text-white hover:none" aria-current="page">Home</NavLink>
                  </li>
                  <li>
-                      <NavLink to={'/about-us'} className="text-gray-900 hover:none">About US</NavLink>
+                      <NavLink to={'/about-us'} className="text-white hover:none">About US</NavLink>
                   </li>
                   <li>
-                      <NavLink to={'/products'} className="text-gray-900 hover:none">Products</NavLink>
+                      <NavLink to={'/products'} className="text-white hover:none">Products</NavLink>
                   </li>
                   <li>
-                      <NavLink to={'/contact-us'} className="text-gray-900 hover:none">Contact US</NavLink>
+                      <NavLink to={'/contact-us'} className="text-white hover:none">Contact US</NavLink>
                   </li>
               </ul>
 
@@ -90,7 +90,7 @@ export default function Header() {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
+        background: #111827;
         z-index: 10;
         display: flex;
         flex-direction: column;
