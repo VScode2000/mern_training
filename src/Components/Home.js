@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
         <Header/>
-        <div className='max-w-full flex justify-center m-10'>
+        <div>
 <Carousel/>
 </div>
   <Footer/>
