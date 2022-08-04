@@ -6,6 +6,7 @@ npm install body-parser
 		react-router-dom 
 		fs 
 		-D tailwindcss postcss autoprefixer
+		tailwind-scrollbar
 		@material-tailwind/react
 
 
