@@ -99,12 +99,6 @@ const Footer = () => {
       </form>
     </div>
 
-    <div class="mb-6 flex">
-      <p>
-        *TEXT*
-      </p>
-    </div>
-
     <div class="grid lg:grid-cols-4 md:grid-cols-2 place-items-center">
       <div class="mb-6">
         <h5 class="uppercase font-bold mb-2.5">Links</h5>
