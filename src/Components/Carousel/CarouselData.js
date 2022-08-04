@@ -1,22 +1,22 @@
+import img4 from "./img/pexels-anastasia-shuraeva-9606744.jpg";
+import img2 from "./img/pexels-jmtphotography-3680095.jpg";
+import img3 from "./img//pexels-pixabay-357453.jpg";
+import img1 from "./img/pexels-miguel-á-padriñán-3930092(1).jpg";
+import img5 from "./img/pexels-pixabay-162553.jpg";
 export const CarouselData = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-    },
-  ];
+  {
+    image: img1,
+  },
+  {
+    image: img2,
+  },
+  {
+    image: img3,
+  },
+  {
+    image: img4,
+  },
+  {
+    image: img5,
+  },
+];

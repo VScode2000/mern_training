@@ -46,59 +46,57 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="mt-8">
-        <div className="max-w-full h-1/2 flex overflow-hidden relative">
-          <AiOutlineLeft
-            onClick={this.prevSlide}
-            className="absolute left-0 text-3xl inset-y-1/2 text-white cursor-pointer"
-          />
+      <div className="max-w-full h-auto flex overflow-hidden relative">
+        <AiOutlineLeft
+          onClick={this.prevSlide}
+          className="absolute left-0 text-3xl inset-y-1/4 text-blue-500  mt-7 cursor-pointer"
+        />
 
-          <Swipe onSwipeLeft={this.nextSlide} onSwipeRight={this.prevSlide}>
-            {CarouselData.map((slide, index) => {
-              return (
-                <img
-                  src={slide.image}
-                  alt="This is a carousel slide"
-                  key={index}
-                  className={
-                    index === this.state.currentSlide
-                      ? "block w-full h-auto object-cover"
-                      : "hidden"
-                  }
-                  onMouseEnter={() => {
-                    this.setState({ paused: true });
-                  }}
-                  onMouseLeave={() => {
-                    this.setState({ paused: false });
-                  }}
-                />
-              );
-            })}
-          </Swipe>
+        <Swipe onSwipeLeft={this.nextSlide} onSwipeRight={this.prevSlide}>
+          {CarouselData.map((slide, index) => {
+            return (
+              <img
+                src={slide.image}
+                alt="This is a carousel slide"
+                key={index}
+                className={
+                  index === this.state.currentSlide
+                    ? "block w-full h-3/5 object-cover "
+                    : "hidden"
+                }
+                onMouseEnter={() => {
+                  this.setState({ paused: true });
+                }}
+                onMouseLeave={() => {
+                  this.setState({ paused: false });
+                }}
+              />
+            );
+          })}
+        </Swipe>
 
-          <div className="absolute w-full flex justify-center bottom-0">
-            {CarouselData.map((element, index) => {
-              return (
-                <div
-                  className={
-                    index === this.state.currentSlide
-                      ? "h-1 w-8 bg-blue-700  mx-2 mb-2  cursor-pointer"
-                      : "h-1 w-8 bg-white  mx-2 mb-2  cursor-pointer"
-                  }
-                  key={index}
-                  onClick={() => {
-                    this.setCurrentSlide(index);
-                  }}
-                ></div>
-              );
-            })}
-          </div>
-
-          <AiOutlineRight
-            onClick={this.nextSlide}
-            className="absolute right-0 text-3xl inset-y-1/2 text-white cursor-pointer"
-          />
+        <div className="absolute w-full h-2/5 bottom-3 flex justify-center ">
+          {CarouselData.map((element, index) => {
+            return (
+              <div
+                className={
+                  index === this.state.currentSlide
+                    ? "h-1 w-8 bg-blue-700  mx-2 mb-2  cursor-pointer"
+                    : "h-1 w-8 bg-white  mx-2 mb-2  cursor-pointer"
+                }
+                key={index}
+                onClick={() => {
+                  this.setCurrentSlide(index);
+                }}
+              ></div>
+            );
+          })}
         </div>
+
+        <AiOutlineRight
+          onClick={this.nextSlide}
+          className="absolute right-0 text-3xl inset-y-1/4 mt-6 text-blue-400  cursor-pointer"
+        />
       </div>
     );
   }
