@@ -101,9 +101,7 @@ const Footer = () => {
 
     <div class="mb-6 flex">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
+        *TEXT*
       </p>
     </div>
 
