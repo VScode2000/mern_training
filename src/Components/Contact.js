@@ -7,7 +7,7 @@ import {ref,push,child,update} from "firebase/database";
 export default function Contact() {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
-  const [number,setNumber] = useState(null);
+  const [number,setNumber] = useState();
   const [message,setMessage] = useState(null);
 
   const handleInputChange = (e) => {
@@ -63,6 +63,8 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="text"
+                    required
+                    placeholder='John Doe'
                     id="name"
                     value={name}
                     onChange = {(e) => handleInputChange(e)}
@@ -81,6 +83,8 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="email"
+                    required
+                    placeholder='example@domain.com'
                     id="email"
                     value={email}
                     onChange = {(e) => handleInputChange(e)}
@@ -99,7 +103,10 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="number"
+                    required
+                    placeholder='9876XXXXXX'
                     id="number"
+                    pattern = "[0-9]*"
                     value={number}
                     onChange = {(e) => handleInputChange(e)}
                     name="number"
@@ -117,6 +124,8 @@ const handleSubmit = () =>{
                   </label>
                   <textarea
                     id="message"
+                    placeholder='Enter your message...'
+                    required
                     value={message}
                     onChange = {(e) => handleInputChange(e)}
                     name="message"
