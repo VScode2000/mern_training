@@ -7,10 +7,15 @@ import img3 from "../img/hacksaw.png";
 import img4 from "../img/hammer.png";
 import img5 from "../img/inch tape.png";
 import img6 from "../img/kitchen knife.png";
-// import img1 from "../img/My project.png";
-// import img1 from "../img/My project.png";
-// import img1 from "../img/My project.png";
-// import img1 from "../img/My project.png";
+import { NavLink } from "react-router-dom";
+import img7 from "../img/Allenkey.png";
+import img8 from "../img/FileHandle(BGrem).png";
+import img9 from "../img/Locks(NoBG).png";
+import img10 from "../img/PVC Cross(NoBG).png";
+import img11 from "../img/scissors(NoBG).png";
+import img12 from "../img/Sets(NoBG).png";
+import img13 from "../img/TinCutter(NoBG).png";
+// import img14 from "../img/";
 export default function Products() {
   return (
     <div>
@@ -20,7 +25,7 @@ export default function Products() {
         <section className="text-gray-600 body-font bg-white w-4/5 rounded-lg m-auto mt-4">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
-              <div className="p-4 md:w-1/3">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
                 <div className="h-full border-2 border-gray-200 bg-gray-100 border-opacity-60 rounded-lg overflow-hidden">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -39,18 +44,18 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  bg-gray-100 ">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img2}
-                    alt="blog"
+                    alt="product"
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -64,18 +69,18 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  bg-gray-100 ">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img3}
-                    alt="blog"
+                    alt="product"
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -89,14 +94,14 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  bg-gray-100 ">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img4}
@@ -114,14 +119,14 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  bg-gray-100 ">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img5}
@@ -139,14 +144,14 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img6}
@@ -164,17 +169,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img7}
                     alt="product"
                   />
                   <div className="p-6">
@@ -189,17 +194,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img8}
                     alt="product"
                   />
                   <div className="p-6">
@@ -214,17 +219,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img9}
                     alt="product"
                   />
                   <div className="p-6">
@@ -239,17 +244,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img10}
                     alt="product"
                   />
                   <div className="p-6">
@@ -260,22 +265,22 @@ export default function Products() {
                       Cutter
                     </h1>
                     <div className="flex items-center flex-wrap ">
-                      <a
-                        href="/"
+                      <NavLink
+                        to={"/"}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
-                      </a>
+                        View More
+                      </NavLink>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img11}
                     alt="product"
                   />
                   <div className="p-6">
@@ -290,17 +295,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img12}
                     alt="product"
                   />
                   <div className="p-6">
@@ -315,17 +320,17 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={img1}
+                    src={img13}
                     alt="product"
                   />
                   <div className="p-6">
@@ -340,14 +345,14 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img1}
@@ -365,14 +370,14 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 md:w-1/3 sm:w-8/12 sm:m-auto">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-gray-100">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={img1}
@@ -390,7 +395,7 @@ export default function Products() {
                         href="/"
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        View More
                       </a>
                     </div>
                   </div>
