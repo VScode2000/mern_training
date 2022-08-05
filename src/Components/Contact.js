@@ -45,7 +45,7 @@ const handleSubmit = (e) =>{
   return (
     <div>
       <Header/>
-      <form onSubmit={(e)=>handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <section className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
@@ -66,14 +66,13 @@ const handleSubmit = (e) =>{
                   <input
                     type="text"
                     pattern="[a-zA-Z][a-zA-Z ]{3,}"
-                    autofocus
                     required
                     autocomplete='on'
                     placeholder='John Doe'
                     lang='en'
                     id="name"
                     value={name}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="name"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -96,7 +95,7 @@ const handleSubmit = (e) =>{
                     placeholder='example@domain.com'
                     id="email"
                     value={email}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="email"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -119,7 +118,7 @@ const handleSubmit = (e) =>{
                     id="number"
                     lang='en'
                     value={number}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="number"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -140,7 +139,7 @@ const handleSubmit = (e) =>{
                     required
                     maxlength='512'
                     value={message}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="message"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
