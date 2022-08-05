@@ -63,8 +63,11 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="text"
+                    autofocus
                     required
+                    autocomplete='on'
                     placeholder='John Doe'
+                    lang='en'
                     id="name"
                     value={name}
                     onChange = {(e) => handleInputChange(e)}
@@ -83,7 +86,10 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="email"
+                    autocapitalize="off" spellcheck="false" autocorrect="off"
                     required
+                    autocomplete='on'
+                    lang='en'
                     placeholder='example@domain.com'
                     id="email"
                     value={email}
@@ -102,10 +108,11 @@ const handleSubmit = () =>{
                     Phone Number
                   </label>
                   <input
-                    type="number"
+                    type="tel"
                     required
                     placeholder='9876XXXXXX'
                     id="number"
+                    lang='en'
                     pattern = "[0-9]*"
                     value={number}
                     onChange = {(e) => handleInputChange(e)}
@@ -124,6 +131,7 @@ const handleSubmit = () =>{
                   </label>
                   <textarea
                     id="message"
+                    lang='en'
                     placeholder='Enter your message...'
                     required
                     value={message}
