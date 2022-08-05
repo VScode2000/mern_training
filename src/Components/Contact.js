@@ -38,6 +38,11 @@ const handleSubmit = (e) =>{
   const newPostKey = push(child(ref(database), 'posts')).key;
   const updates = {};
   updates['/' + newPostKey] = obj
+  setName('')
+  setEmail('')
+  setNumber('')
+  setMessage('')
+  alert('Form Submitted...')
   return update(ref(database), updates);
 }
 
@@ -45,7 +50,7 @@ const handleSubmit = (e) =>{
   return (
     <div>
       <Header/>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} loading>
         <section className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
