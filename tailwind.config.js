@@ -14,9 +14,6 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
-    backgroundImage: {
-      'about': "url('../src/img/banner.jpg')",
-    },
     spacing: {
       px: '1px',
     0: '0',
