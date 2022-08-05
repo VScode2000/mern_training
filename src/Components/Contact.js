@@ -27,7 +27,8 @@ export default function Contact() {
 
 }
 
-const handleSubmit = () =>{
+const handleSubmit = (e) =>{
+  e.preventDefault()
   let obj = {
           name:name,
           email:email,
@@ -44,6 +45,7 @@ const handleSubmit = () =>{
   return (
     <div>
       <Header/>
+      <form onSubmit={(e)=>handleSubmit(e)}>
         <section className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
@@ -113,7 +115,6 @@ const handleSubmit = () =>{
                     placeholder='9876XXXXXX'
                     id="number"
                     lang='en'
-                    pattern = "[0-9]*"
                     value={number}
                     onChange = {(e) => handleInputChange(e)}
                     name="number"
@@ -142,7 +143,7 @@ const handleSubmit = () =>{
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button onClick={()=>handleSubmit()} type='submit' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button type='submit' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Submit
                 </button>
               </div>
@@ -205,6 +206,7 @@ const handleSubmit = () =>{
           </div>
         </div>
       </section>
+      </form>
       <Footer/>
     </div>
       
