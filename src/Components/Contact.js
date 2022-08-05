@@ -29,7 +29,7 @@ export default function Contact() {
 
 const handleSubmit = () =>{
   let obj = {
-          name : name,
+          name:name,
           email:email,
           number:number,
           message:message,
