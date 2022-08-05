@@ -8,7 +8,9 @@ npm install body-parser
 		-D tailwindcss postcss autoprefixer
 		tailwind-scrollbar
 		@material-tailwind/react
-
+		axios
+		node-sass
+		npm i --save-dev sass
 
 	    npx tailwindcss init -p
 	    npx create-react-app [project name]

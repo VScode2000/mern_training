@@ -1,8 +1,46 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import {database} from '../firebase'
+import {ref,push,child,update} from "firebase/database";
 
 export default function Contact() {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [number,setNumber] = useState(null);
+  const [message,setMessage] = useState(null);
+
+  const handleInputChange = (e) => {
+    const {id , value} = e.target;
+    if(id === "name"){
+        setName(value);
+    }
+    if(id === "email"){
+        setEmail(value);
+    }
+    if(id === "number"){
+        setNumber(value);
+    }
+    if(id === "message"){
+        setMessage(value);
+    }
+
+}
+
+const handleSubmit = () =>{
+  let obj = {
+          name : name,
+          email:email,
+          number:number,
+          message:message,
+      }       
+  const newPostKey = push(child(ref(database), 'posts')).key;
+  const updates = {};
+  updates['/' + newPostKey] = obj
+  return update(ref(database), updates);
+}
+
+
   return (
     <div>
       <Header/>
@@ -26,6 +64,8 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
+                    value={name}
+                    onChange = {(e) => handleInputChange(e)}
                     name="name"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -42,6 +82,8 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange = {(e) => handleInputChange(e)}
                     name="email"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -58,6 +100,8 @@ export default function Contact() {
                   <input
                     type="number"
                     id="number"
+                    value={number}
+                    onChange = {(e) => handleInputChange(e)}
                     name="number"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -73,13 +117,15 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    value={message}
+                    onChange = {(e) => handleInputChange(e)}
                     name="message"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button onClick={()=>handleSubmit()} type='submit' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Submit
                 </button>
               </div>
