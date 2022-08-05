@@ -99,14 +99,6 @@ const Footer = () => {
       </form>
     </div>
 
-    <div class="mb-6 flex">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </div>
-
     <div class="grid lg:grid-cols-4 md:grid-cols-2 place-items-center">
       <div class="mb-6">
         <h5 class="uppercase font-bold mb-2.5">Links</h5>

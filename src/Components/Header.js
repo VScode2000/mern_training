@@ -44,7 +44,7 @@ export default function Header() {
             </div>
 
             <ul className="flex flex-col text-xl uppercase font-semibold">
-            <input type="text" id="search-navbar" className="inline-block p-2.5 pl-8 w-60 text-gray-900 bg-white rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
+            <input type="search" id="search-navbar" className="inline-block p-2.5 pl-8 w-60 text-gray-900 bg-white rounded-lg border border-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search..."></input>
                 <li className='mt-7'>
                     <NavLink to={'/'} className="text-white hover:none" aria-current="page">Home</NavLink>
                 </li>
