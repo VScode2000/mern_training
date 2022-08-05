@@ -7,7 +7,7 @@ import {ref,push,child,update} from "firebase/database";
 export default function Contact() {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
-  const [number,setNumber] = useState();
+  const [number,setNumber] = useState(null);
   const [message,setMessage] = useState(null);
 
   const handleInputChange = (e) => {
@@ -65,6 +65,7 @@ const handleSubmit = (e) =>{
                   </label>
                   <input
                     type="text"
+                    pattern="[a-zA-Z][a-zA-Z ]{3,}"
                     autofocus
                     required
                     autocomplete='on'
@@ -112,7 +113,9 @@ const handleSubmit = (e) =>{
                   <input
                     type="tel"
                     required
+                    maxlength='10'
                     placeholder='9876XXXXXX'
+                    pattern='[0-9]{10}'
                     id="number"
                     lang='en'
                     value={number}
@@ -135,6 +138,7 @@ const handleSubmit = (e) =>{
                     lang='en'
                     placeholder='Enter your message...'
                     required
+                    maxlength='512'
                     value={message}
                     onChange = {(e) => handleInputChange(e)}
                     name="message"
