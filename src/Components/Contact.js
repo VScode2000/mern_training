@@ -7,7 +7,7 @@ import {ref,push,child,update} from "firebase/database";
 export default function Contact() {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
-  const [number,setNumber] = useState();
+  const [number,setNumber] = useState(null);
   const [message,setMessage] = useState(null);
 
   const handleInputChange = (e) => {
@@ -27,7 +27,8 @@ export default function Contact() {
 
 }
 
-const handleSubmit = () =>{
+const handleSubmit = (e) =>{
+  e.preventDefault()
   let obj = {
           name:name,
           email:email,
@@ -36,7 +37,12 @@ const handleSubmit = () =>{
       }       
   const newPostKey = push(child(ref(database), 'posts')).key;
   const updates = {};
-  updates['/' + newPostKey] = obj
+  updates['/contact-us' + newPostKey] = obj
+  setName('')
+  setEmail('')
+  setNumber('')
+  setMessage('')
+  alert('Form Submitted...')
   return update(ref(database), updates);
 }
 
@@ -44,6 +50,7 @@ const handleSubmit = () =>{
   return (
     <div>
       <Header/>
+      <form onSubmit={handleSubmit} loading>
         <section className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
@@ -63,14 +70,14 @@ const handleSubmit = () =>{
                   </label>
                   <input
                     type="text"
-                    autofocus
+                    pattern="[a-zA-Z][a-zA-Z ]{3,}"
                     required
                     autocomplete='on'
                     placeholder='John Doe'
                     lang='en'
                     id="name"
                     value={name}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="name"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -93,7 +100,7 @@ const handleSubmit = () =>{
                     placeholder='example@domain.com'
                     id="email"
                     value={email}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="email"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -110,12 +117,13 @@ const handleSubmit = () =>{
                   <input
                     type="tel"
                     required
+                    maxlength='10'
                     placeholder='9876XXXXXX'
+                    pattern='[0-9]{10}'
                     id="number"
                     lang='en'
-                    pattern = "[0-9]*"
                     value={number}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="number"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -134,15 +142,16 @@ const handleSubmit = () =>{
                     lang='en'
                     placeholder='Enter your message...'
                     required
+                    maxlength='512'
                     value={message}
-                    onChange = {(e) => handleInputChange(e)}
+                    onChange = {handleInputChange}
                     name="message"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button onClick={()=>handleSubmit()} type='submit' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button type='submit' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Submit
                 </button>
               </div>
@@ -205,6 +214,7 @@ const handleSubmit = () =>{
           </div>
         </div>
       </section>
+      </form>
       <Footer/>
     </div>
       
