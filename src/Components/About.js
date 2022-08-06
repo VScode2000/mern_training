@@ -7,9 +7,11 @@ export default function About() {
     <div>
       <Header/>
       <div>
-        <div className='bg-black text-white mx-6'>
-          <div className='font-bold flex justify-center text-5xl'>About Us</div><br/>
-          <div className='uppercase flex justify-center text-3xl'>We offer quality that is remembered long after the price is forgotten.</div>
+        <div className='bg-about h-80 top-0'>
+          <div className='bg-white text-black mx-12 py-16 my-10'>
+            <div className='font-bold flex justify-center text-5xl'>About Us</div>
+           <div className='uppercase flex justify-center text-3xl font-semibold mt-3'>We offer quality that is remembered long after the price is forgotten.</div>
+          </div>
         </div>
       </div>
       <Footer/>
