@@ -4,15 +4,11 @@ npm install body-parser
 		cors
 		mongodb 
 		react-router-dom 
-		fs 
-		-D tailwindcss postcss autoprefixer
-		tailwind-scrollbar
-		@material-tailwind/react
+		fs
+		npm install @mui/icons-material
+		npm install @mui/material @emotion/react @emotion/styled
 		axios
-		node-sass
-		npm i --save-dev sass
 
-	    npx tailwindcss init -p
 	    npx create-react-app [project name]
 
 
